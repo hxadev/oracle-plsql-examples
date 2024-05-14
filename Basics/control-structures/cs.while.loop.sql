@@ -1,0 +1,22 @@
+DECLARE
+    X INTEGER:=10;
+BEGIN
+
+    WHILE X<=100 LOOP
+        DBMS_OUTPUT.PUT_LINE(X);
+        
+        X:=X+1;
+    END LOOP;
+    
+END;
+
+
+DECLARE
+    NOMBRE VARCHAR2(100):='ALFONSO';
+    X INTEGER:=1;
+BEGIN
+    WHILE X<LENGTH(NOMBRE)+1 LOOP
+        DBMS_OUTPUT.PUT_LINE(SUBSTR(NOMBRE,X,1)||'-'||TO_CHAR(X));
+        X:=X+1;
+    END LOOP;
+END;

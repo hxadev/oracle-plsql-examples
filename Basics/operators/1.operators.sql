@@ -1,0 +1,52 @@
+/*
+    OPERADORES PL/SQL
+    
+    + SUMA
+    - RESTA
+    / DIVISION
+    * MULTIPLICACION
+    ** EXPONENTE
+    || CONCATENACION
+    
+*/
+
+SET SERVEROUTPUT ON;
+
+DECLARE
+ X NUMBER:=5;
+ Z NUMBER :=10;
+ A VARCHAR2(100):='EXAMPLE';
+ TODAY DATE:=SYSDATE;
+ bod DATE:='10-01-2024';
+ E bod%TYPE;
+BEGIN
+    
+    -- SUMA
+    DBMS_OUTPUT.PUT_LINE('-- SUMA --');
+    DBMS_OUTPUT.PUT_LINE(X+10);
+    DBMS_OUTPUT.PUT_LINE(X+Z);
+    
+    -- RESTA
+    DBMS_OUTPUT.PUT_LINE('-- RESTA --');
+    DBMS_OUTPUT.PUT_LINE(X-10+5);
+    DBMS_OUTPUT.PUT_LINE(X-Z+10);
+
+    -- CONCATENACION -- PL/SQL TRatara de convertir de un tipo de dato a otro dependendiando del operador utilizado.
+    DBMS_OUTPUT.PUT_LINE('-- CONCATENACION --');
+    DBMS_OUTPUT.PUT_LINE(X||'-'||A);
+    A:=A||' ESTA ES UNA CONCATENACION';
+    DBMS_OUTPUT.PUT_LINE(A);
+    
+    DBMS_OUTPUT.PUT_LINE('FECHA HOY: '||TODAY||' FECHA VARIABLE: '||bod);
+    
+    -- Multiplicacion
+    DBMS_OUTPUT.PUT_LINE('-- MULTIPLICACION --');
+    DBMS_OUTPUT.PUT_LINE(X*Z);
+    
+    -- EXPONENTE
+    DBMS_OUTPUT.PUT_LINE('-- EXPONENTE --');
+    DBMS_OUTPUT.PUT_LINE(X**2);
+    
+    
+    
+END;
